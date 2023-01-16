@@ -4,6 +4,13 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=P, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Work+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <meta name="description" content="" />
     <link rel="stylesheet" href="./assets/style.css" />
     <title>Page connexion</title>
   </head>
@@ -12,8 +19,8 @@
       <h1>Sophie Bluel <span>Architecte d'inteérieur</span></h1>
       <nav>
         <ul>
-          <li>projets</li>
-          <li>contact</li>
+          <a href="./index.html"><li>projets</li></a>
+          <a href="./index.html#contact"><li>contact</li></a>
           <li>login</li>
           <li><img src="./assets/icons/instagram.png" alt="Instagram" /></li>
         </ul>
@@ -21,25 +28,28 @@
     </header>
     <section class="connexion">
       <h2>Log in</h2>
-      <h3>E-mail</h3>
-      <form id="form" method="post">
-        <label for="city" style="background: #f2f2f2"></label>
-        <span id="icon-loc"><i class="fa-solid fa-location-dot"></i></span>
-        <input type="text" name="E-mail" id="mail_form" />
+
+      <form name="loginform">
+        <label>E-mail</label>
+        <input id="signin-email" type="email" name="email" class="form" />
+        <label>Mot de passe</label>
+        <input
+          id="signin-password"
+          type="password"
+          name="password"
+          class="form"
+        />
+        <p id="login-error" hidden></p>
+        <input
+          id="login-submit"
+          type="submit"
+          value="Se connecter"
+          class="button_connexion"
+        />
       </form>
 
-      <h3>Mot de passe</h3>
-      <form id="form" method="post">
-        <label for="city" style="background: #f2f2f2"></label>
-        <span id="icon-loc"><i class="fa-solid fa-location-dot"></i></span>
-        <input type="text" name="E-mail" id="mail_form" />
-      </form>
-
-      <button class="button_connexion">Se connecter</button>
-
-      <a> <p>Mot de passe oublié</p></a>
-
-      <form><E-mail></E-mail></form>
+      <br />
+      <a href="#"><span>Mot de passe oublié</span></a>
     </section>
     <footer>
       <nav>
@@ -50,3 +60,4 @@
     </footer>
   </body>
 </html>
+<script src="login.js"></script>
