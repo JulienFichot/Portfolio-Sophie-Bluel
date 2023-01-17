@@ -348,3 +348,52 @@ nav a {
   color: red;
   border-radius: 10px;
 }
+
+/* *** ** * MODALE * ** *** */
+
+.modal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: O;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  margin: 0 0;
+}
+
+#titlemodal {
+  font-family: "Work Sans";
+  color: black;
+}
+
+.modal-wrapper {
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+  width: 600px;
+  max-width: calc(100vw - 20px);
+  max-height: calc(100vh - 20px);
+  padding: 20px;
+  background-color: #fff;
+}
+
+.modal_button_add {
+  min-width: 100px;
+  padding: 10px;
+  background: none;
+  border: 1px solid #1d6154;
+  border-radius: 60px;
+  color: #1d6154;
+  margin: 0 10px;
+  font-family: "Syne";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+}
+
+/* Modale page 2 */
