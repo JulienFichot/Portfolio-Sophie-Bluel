@@ -91,6 +91,10 @@ video {
   font: inherit;
   vertical-align: baseline;
 }
+
+head {
+  width: 100%;
+}
 /* HTML5 display-role reset for older browsers */
 article,
 aside,
@@ -130,6 +134,7 @@ table {
 /** end reset css**/
 body {
   max-width: 1140px;
+
   margin: auto;
   font-family: "Work Sans";
   font-size: 14px;
@@ -138,6 +143,9 @@ header {
   display: flex;
   justify-content: space-between;
   margin: 50px 0;
+}
+header a {
+  text-decoration: none;
 }
 section {
   margin: 50px 0;
@@ -186,8 +194,9 @@ li:hover {
 }
 #introduction img {
   display: block;
-  margin: auto;
+
   width: 80%;
+  padding-bottom: 10px;
 }
 
 #introduction article {
@@ -195,6 +204,7 @@ li:hover {
 }
 #introduction h2 {
   margin-bottom: 1em;
+  padding-top: 15px;
 }
 
 #introduction p {
@@ -298,6 +308,8 @@ footer nav ul {
   color: white;
   padding: 7px;
   border: 0px solid transparent;
+  font-family: "syne";
+  cursor: pointer;
 }
 .connexion a {
   text-align: center;
@@ -351,42 +363,46 @@ nav a {
 
 /* *** ** * MODALE * ** *** */
 
+.modal_size {
+  width: 70%;
+}
+
 .modal {
   display: flex;
   align-items: center;
   justify-content: center;
   position: fixed;
   top: 0;
-  left: O;
+  left: 0;
   height: 100%;
   width: 100%;
   background: rgba(0, 0, 0, 0.8);
-  margin: 0 0;
+  margin: 0;
 }
 
 #titlemodal {
   font-family: "Work Sans";
   color: black;
+  text-align: center;
 }
 
 .modal-wrapper {
   display: flex;
   flex-direction: column;
-  overflow: auto;
+  align-items: center;
   width: 600px;
-  max-width: calc(100vw - 20px);
-  max-height: calc(100vh - 20px);
   padding: 20px;
   background-color: #fff;
 }
 
 .modal_button_add {
-  min-width: 100px;
+  border-top: 20px black solid;
+  width: 300px;
   padding: 10px;
-  background: none;
+  background: #1d6154;
   border: 1px solid #1d6154;
   border-radius: 60px;
-  color: #1d6154;
+  color: white;
   margin: 0 10px;
   font-family: "Syne";
   font-style: normal;
@@ -394,6 +410,268 @@ nav a {
   font-size: 16px;
   line-height: 19px;
   text-align: center;
+  margin: 30px 0;
+  cursor: pointer;
+  text-decoration: none;
+}
+#delete-gallery {
+  color: #d65353;
+  cursor: pointer;
+  padding: 5px;
+}
+.modal-buttons {
+  border-top: 2px solid grey;
+  padding-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  text-align: center;
+  align-items: center;
+}
+#modal_projet {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  width: 100%;
+
+  margin-top: 50px;
+}
+#modal_projet figure img {
+  height: 100px;
+  padding-right: 8px;
+  padding-bottom: 2px;
 }
 
+#modal_projet figure {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+.js-modal-close {
+  border: none;
+  cursor: pointer;
+  text-align: center;
+  background-color: #fff;
+}
+
+.fa-xmark {
+  float: right;
+}
+
+.arrow-left {
+  float: left;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+  background-color: #fff;
+  padding: 0;
+  cursor: pointer;
+}
+
+/*  END MODALE */
+.modify_text {
+  color: black;
+  text-decoration: none;
+
+  margin-bottom: 10px;
+  font-family: "Work Sans";
+}
+
+.modify_text_2 {
+  color: black;
+  text-decoration: none;
+  padding-bottom: 15px;
+  font-family: "Work Sans";
+}
+.modify_text_3 {
+  color: black;
+  text-decoration: none;
+  font-size: 15px;
+  padding-left: 20px;
+  font-family: "Work Sans";
+}
 /* Modale page 2 */
+
+.banner {
+  background: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30px;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.banner_text {
+  color: #fff;
+  margin-right: 15px;
+}
+
+.banner_button {
+  background-color: #fff;
+  border-radius: 60px;
+  border: none;
+  padding: 4px 10px;
+}
+
+/* FORM ADD PICTURE */
+.add_picture {
+  height: 180px;
+  background-color: #e8f1f6;
+  margin: 30px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.add_picture_modal {
+  display: flex;
+  flex-direction: column;
+
+  height: 300px;
+  background-color: #e8f1f6;
+}
+
+.form_add_picture {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  margin-bottom: 30px;
+}
+#modal2 input {
+  box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.09);
+  border: white;
+  height: 45px;
+  margin-bottom: 20px;
+}
+#modal2 label {
+  margin-bottom: 20px;
+}
+
+hr {
+  background-color: grey;
+  width: 100%;
+  height: 1px;
+  margin-top: 30px;
+}
+
+.button_add_picture {
+  background-color: #cbd6dc;
+  color: #306685;
+  border-radius: 60px;
+  margin: 20px 0;
+  padding: 10px 31px;
+  cursor: pointer;
+  border: 0px;
+}
+
+.delete_button {
+  position: relative;
+  bottom: 110px;
+  left: 49px;
+  background-color: black;
+  color: #fff;
+  padding: 4px;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.arrow_button {
+  position: relative;
+  bottom: 110px;
+  left: 5px;
+  background-color: black;
+  color: #fff;
+  padding: 4px;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+/* ICONES corbeille = <i class="fa-solid fa-trash-can"></i>
+fleche haut bas gauche droite = <i class="fa-regular fa-arrows-up-down-left-right"></i>
+/**/
+
+.close-modal2-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.close-modal-container {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+}
+.arrow_left {
+  border: none;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.fa-image {
+  font-size: 50px;
+  color: #cbd6dc;
+}
+
+.image_input {
+  width: 100%;
+  height: 200px;
+  background-color: #e8f1f6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#title-input {
+  width: 100%;
+  height: 51px;
+  box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.09);
+}
+
+#category-input {
+  width: 100%;
+  height: 51px;
+  box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.09);
+  border: 0px;
+}
+
+.button_send_new_work {
+  background-color: #a7a7a7;
+  color: white;
+  border-radius: 60px;
+  margin: 20px 0;
+  padding: 10px 31px;
+  cursor: pointer;
+  border: 0px;
+}
+
+.form_modal2 {
+  display: flex;
+  flex-direction: column;
+}
+
+.contain_modal2 {
+  width: 70%;
+  margin-top: 20px;
+}
+
+.preview {
+  display: flex;
+  justify-content: center;
+}
+
+#preview-input {
+  position: absolute;
+  height: 200px;
+  width: 175px;
+}
+
+.preview_text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
