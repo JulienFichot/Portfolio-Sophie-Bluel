@@ -161,7 +161,7 @@ async function deleteWork(workId) {
     headers: {
       accept: "*/*",
       Authorization:
-        "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImlhdCI6MTY3NTQyOTE4NSwiZXhwIjoxNjc1NTE1NTg1fQ.DhsFyjAPn1PRpUnnWt_8p-eT6oHZs2kltQ-yN8SWiIY",
+        "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImlhdCI6MTY3NjI4MjU0NSwiZXhwIjoxNjc2MzY4OTQ1fQ.VSctB7X0-mjw4hOWHVErcDefDV7XfoAyA0AqNWNULA8",
     },
   });
   try {
@@ -192,7 +192,7 @@ form.addEventListener("submit", async (e) => {
   myHeaders.append("Accept", "application/json");
   myHeaders.append(
     "Authorization",
-    "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImlhdCI6MTY3NTQyOTE4NSwiZXhwIjoxNjc1NTE1NTg1fQ.DhsFyjAPn1PRpUnnWt_8p-eT6oHZs2kltQ-yN8SWiIY"
+    "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImlhdCI6MTY3NjI4MjU0NSwiZXhwIjoxNjc2MzY4OTQ1fQ.VSctB7X0-mjw4hOWHVErcDefDV7XfoAyA0AqNWNULA8"
   );
 
   const requestOptions = {
