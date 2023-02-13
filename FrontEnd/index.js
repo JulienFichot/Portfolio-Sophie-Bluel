@@ -152,16 +152,15 @@ if (localStorage.token) {
   edition.forEach((element) => {
     element.hidden = false;
   });
-  console.log(localStorage.token);
 }
+const token = localStorage.token;
 
 async function deleteWork(workId) {
   const response = await fetch(`http://localhost:5678/api/works/${workId}`, {
     method: "DELETE",
     headers: {
       accept: "*/*",
-      Authorization:
-        "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImlhdCI6MTY3NjI4MjU0NSwiZXhwIjoxNjc2MzY4OTQ1fQ.VSctB7X0-mjw4hOWHVErcDefDV7XfoAyA0AqNWNULA8",
+      Authorization: `Bearer ${token}`,
     },
   });
   try {
@@ -190,10 +189,7 @@ form.addEventListener("submit", async (e) => {
 
   const myHeaders = new Headers();
   myHeaders.append("Accept", "application/json");
-  myHeaders.append(
-    "Authorization",
-    "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImlhdCI6MTY3NjI4MjU0NSwiZXhwIjoxNjc2MzY4OTQ1fQ.VSctB7X0-mjw4hOWHVErcDefDV7XfoAyA0AqNWNULA8"
-  );
+  myHeaders.append("Authorization", `Bearer ${token}`);
 
   const requestOptions = {
     method: "POST",
